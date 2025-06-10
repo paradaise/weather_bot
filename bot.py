@@ -32,7 +32,7 @@ def get_information(message):
     if message.chat.type == 'private':
         if message.text == '📑Контакты':
             bot.send_message(message.chat.id, 'У вас что-то не работает?Или есть предложения о сотрудничестве?Напишите мне!')
-            bot.send_message(message.chat.id, 'Гоголев Виктор:n📱Telegram: t.me/wa55upn🌐Вконтакте: vk.com/yowa55upn🐙GitHub: github.com/paradaisen')
+            bot.send_message(message.chat.id, 'Гоголев Виктор:\n📱Telegram: t.me/wa55up\n🌐Вконтакте: vk.com/yowa55up\n🐙GitHub: github.com/paradaise')
         elif message.text == '💸Поддержать':
             bot.send_message(message.chat.id, '💵Вы можете поддержать наш проект,нажав кнопку ниже:', reply_markup=keyboard(donation_menu))
         elif message.text == '🫰Юмани':
@@ -105,7 +105,6 @@ def get_weather(message, city, count):
         weather_info = format_weather_info(data["forecast"]["forecastday"][count], date_template, prefix)
         bot.send_message(message.chat.id, weather_info, parse_mode="html", reply_markup=keyboard(main_menu))
 
-    
 
 bot.polling()
 
